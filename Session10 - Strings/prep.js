@@ -71,6 +71,14 @@
 
 // you can create a whole new string and assign it to the old one
 
+//------------------ Concatination of the strings    [+, concat]
+// let name1 = "Vijay Pratap Singh";
+// let age = "22";
+// let statement = name1 + " is " + age + " years old."
+// let newStr = age.concat(name1);
+// console.log(newStr);
+// console.log(name1 + age);
+// console.log(statement);
 
 // Changing the case of the string
 // let str = "Hello How Are You ?"
@@ -175,7 +183,7 @@
 // 1.> split : which converts your string to an array
 // -------------split
 // let name1 = "Mayank";
-// let aplhabet = "a b c"
+// let aplhabet = "Hello how are you?"
 // const splitStr = name1.split("")
 // const splitStr2 = aplhabet.split(" ")
 
