@@ -39,6 +39,12 @@
 //     ['onion', 50]
 // ]);
 
+
+//-=----------------- MAP ITERATOR
+// console.log((recipeMap.values()));
+// console.log(Array.from(recipeMap.values()));
+
+
 // // iterate over keys (vegetables)
 // for (let vegetable of recipeMap.keys()) {
 //     console.log(vegetable); // cucumber, tomatoes, onion
