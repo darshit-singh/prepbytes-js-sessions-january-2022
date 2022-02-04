@@ -1,11 +1,11 @@
 // -----------CLONING AND MERGING OBJECTS
 
-let user = {
-    name: "John",
-    age: 30
-};
+// let user = {
+//     name: "John",
+//     age: 30
+// };
 
-let clone = {}; // the new empty object
+// let clone = {}; // the new empty object
 
 // // let's copy all user properties into it
 // for (let key in user) {
@@ -30,6 +30,47 @@ let clone = {}; // the new empty object
 // };
 
 // let clone = Object.assign({}, user);
+
+// ----------spread operator
+// function sum(x, y, z) {
+//     return x + y + z;
+//   }
+  
+//   const numbers = [1, 2, 3];
+  
+//   console.log(sum(...numbers));
+
+
+
+//-----to clone
+// let user = {
+//     name: "John",
+//     age: 30
+// };
+
+// let clone = {...user}
+
+
+//-------to concatenate
+// let arr1 = [0, 1, 2];
+// let arr2 = [3, 4, 5];
+
+// //  Append all items from arr2 onto arr1
+// arr1 = arr1.concat(arr2);
+
+// arr1 = [...arr1, ...arr2];
+
+
+
+
+//-------object merging and cloning
+// let obj1 = { foo: 'bar', x: 42 };
+// let obj2 = { foo: 'baz', y: 13 };
+
+// let clonedObj = { ...obj1 };
+// // Object { foo: "bar", x: 42 }
+
+// let mergedObj = { ...obj1, ...obj2 };
 
 
 
