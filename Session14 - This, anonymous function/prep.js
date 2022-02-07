@@ -188,10 +188,12 @@
 
 // We assigned an Anonymous Function in a Variable, then we used that variable to invoke the function by adding parentheses () at the end.
 
+//---------- CALLBACK
 //--------------- function as argument
 // const sayHello = function () {
 //     return "Hello, ";
 // }
+// const sayHello = () => "hello"
 // function greeting(funcVariable, name) {
 //     console.log(funcVariable)
 //     console.log(funcVariable(), name)
