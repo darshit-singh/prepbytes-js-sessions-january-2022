@@ -67,24 +67,26 @@
 // console.log(obj)
 // console.log(obj.hasOwnProperty) // hidden function in prototype
 
+
 // let rabbit = {
-//     name1: 'rabbit'
-// }
+//         name1: 'rabbit'
+//     }
 // let animal = {
 //     name2: 'animal',
 //     sayHi: function () {
-//         console.log(this.name2)
+//             console.log(this.name2)
+//         }
 //     }
-// }
-// rabbit.__proto__ = animal
-// console.log(rabbit) // 2 prototypes, one in rabbit one in animal
-
+//     rabbit.__proto__ = animal
+//     console.log(rabbit) // 2 prototypes, one in rabbit one in animal
+            
 // let animal = {
-//     eats: true
-// };
+//         eats: true
+//     };
 // let rabbit = {
-//     jumps: true
-// };
+//         jumps: true
+//     };
+//talk about own property and inherited property
 
 // rabbit.__proto__ = animal;
 // console.log(rabbit)
@@ -193,6 +195,7 @@
 
 
 // --------------QUESTIONS ON PROTOTYPE
+// ------question1
 // let animal = {
 //     jumps: null
 //   };
@@ -211,7 +214,8 @@
   
 //   console.log( rabbit.jumps ); // undefined
 
-
+// --------question2
+// Use __proto__ to assign prototypes in a way that any property lookup will follow the path: pockets → bed → table → head. For instance, pockets.pen should be 3 (found in table), and bed.glasses should be 1 (found in head).
 // let head = {
 //   glasses: 1
 // };
@@ -228,6 +232,33 @@
 // let pockets = {
 //   money: 2000
 // };
+// The lookup time for properties that are high up on the prototype chain can have a negative impact on the performance, and this may be significant in the code where performance is critical. Additionally, trying to access nonexistent properties will always traverse the full prototype chain.
+
+// solution
+// let head = {
+//     glasses: 1
+//   };
+  
+//   let table = {
+//     pen: 3,
+//     __proto__: head
+//   };
+  
+//   let bed = {
+//     sheet: 1,
+//     pillow: 2,
+//     __proto__: table
+//   };
+  
+//   let pockets = {
+//     money: 2000,
+//     __proto__: bed
+//   };
+  
+//   alert( pockets.pen ); // 3
+//   alert( bed.glasses ); // 1
+//   alert( table.money ); // undefined
+
 
 //*******************------------very important question--------------------*****************
 // let hamster = {
