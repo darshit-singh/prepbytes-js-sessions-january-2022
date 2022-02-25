@@ -318,16 +318,16 @@
 
 // How to us it without let
 
-function fun() {
-  for (var i = 1; i <= 5; i++) {
-    function close(x) {
-      setTimeout(function () {
-        console.log(x)
-      }, x * 1000)
-    }
-    close(i)
-  }
-}
-fun()
+// function fun() {
+//   for (var i = 1; i <= 5; i++) {
+//     function close(x) {
+//       setTimeout(function () {
+//         console.log(x)
+//       }, x * 1000)
+//     }
+//     close(i)
+//   }
+// }
+// fun()
 
 // Everytime you call close with i; it creates a new copy of i inside which is used by SetTimeout
