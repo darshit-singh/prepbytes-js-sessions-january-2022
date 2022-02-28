@@ -117,4 +117,21 @@
 // }
 // fun()
 
+
+// another approach
+// function fun() {
+//     for (var i = 1; i <= 5; i++) {
+//         function inner() {
+//             var k = i;
+//             setTimeout(function () {
+//                 console.log(k);
+//             }, 2000)
+//         }
+//         inner();
+//     }
+//     console.log('Inside fn')
+// };
+// fun();
+
+
 // Everytime you call close with i; it creates a new copy of i inside which is used by SetTimeout
