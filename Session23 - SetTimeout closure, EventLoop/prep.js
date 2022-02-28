@@ -32,6 +32,25 @@
 // console.log('print random')
 
 //explain event loop
+// function printHello() {
+//     console.log("hello inside printHello")
+// }
+
+// function abc() {
+//     console.log("me second")
+// }
+
+// console.log("Me first")
+// setTimeout(printHello, 2000)
+// abc()
+// console.log("Me third")
+
+
+
+
+
+
+
 
 // SetTimeout stores the callback function somewhere and attaches a timer to it, when that timer expires JS executes that function
 
@@ -46,7 +65,7 @@
 // fun()
 
 
-
+//-------- CLOSURE AND SET TIMEOUT
 // How do I print values in succession 1 to 5  with timeouts?
 
 // function fun() {
