@@ -1,7 +1,7 @@
 // 4
 // Write function sum that works like this: sum(a)(b) = a+b.
-// function sum(a) {
 
+// function sum(a) {
 //   return function(b) {
 //     return a + b; // takes "a" from the outer lexical environment
 //   };
@@ -31,6 +31,9 @@
 // }, 3000)
 // console.log('print random')
 
+//explain event loop
+
+// SetTimeout stores the callback function somewhere and attaches a timer to it, when that timer expires JS executes that function
 
 // function fun() {
 //   var a = 10;
@@ -41,9 +44,6 @@
 // }
 
 // fun()
-
-// SetTimeout stores the callback function somewhere and attaches a timer to it, when that timer expires JS executes that function
-
 
 
 
