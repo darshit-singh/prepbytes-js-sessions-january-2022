@@ -117,31 +117,26 @@
 // rejected: meaning that the operation failed.
 
 
-function printNum(num) {
-    return new Promise((resolve, reject) => {
-        if (num % 2 == 0) {
-            resolve("CONDITION SATISFIED");
-        } else {
-            reject("CONDITION UNSATISFIED");
-        }
-    })
-}
+// function printNum(num) {
+//     return new Promise((resolve, reject) => {
+//         if (num % 2 == 0) {
+//             resolve("CONDITION SATISFIED");
+//         } else {
+//             reject("CONDITION UNSATISFIED");
+//         }
+//     })
+// }
 
-printNum(25)
-    .then((response) => {             //to handle success response
-        console.log(response);
-    })
-    .catch((error) => {               //to handle failure
-        console.log(error);
-    })
-    .finally(() => {                  //runs in both cases; reject and resolve
-        console.log("PROMISE IS COMPLETED");
-    })
-
-
-
-
-
+// printNum(25)
+//     .then((response) => {             //to handle success response
+//         console.log(response);
+//     })
+//     .catch((error) => {               //to handle failure
+//         console.log(error);
+//     })
+//     .finally(() => {                  //runs in both cases; reject and resolve
+//         console.log("PROMISE IS COMPLETED");
+//     })
 
 
 // let promise1 = new Promise((resolve, reject) => {
