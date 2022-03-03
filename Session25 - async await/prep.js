@@ -29,7 +29,7 @@
 // })
 
 //------micro task queue
-
+// promise has more priority than setTimeout
 
 
 // function printLetter(letter) {
