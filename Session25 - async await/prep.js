@@ -182,9 +182,9 @@
 // Also unlike cookies, the server can’t manipulate storage objects via HTTP headers. Everything’s done in JavaScript.
 
 // localStorage.setItem(key, value)
-localStorage.setItem('greetings', 'hi') //set
+// localStorage.setItem('greetings', 'hi') //set
 
-console.log(localStorage.getItem('greetings')) //get
+// console.log(localStorage.getItem('greetings')) //get
 
 
 // We can also use a plain object way of getting/setting keys, like this:
