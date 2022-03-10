@@ -29,6 +29,24 @@
 
 // question - make a multiplyBy2 function
 
+// ----------shadowing
+// var x = 10;
+// function a() {
+//     console.log(x);
+// }
+// a();
+
+
+// var x = 30;
+
+// function a() {
+//     var x = 40;
+//     console.log(x);
+// }
+
+
+
+
 // -----------Arrays
 
 // let arr = [1, 2, 3, 4, 5];
