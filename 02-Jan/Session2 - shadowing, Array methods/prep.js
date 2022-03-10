@@ -79,22 +79,10 @@
 // // console.log(arr.push('hey'));//
 // let a = arr.push('hey', 'last', 'thing');
 // console.log(a);// 8
-// console.log(arr); //
+// console.log(arr);
 
-// function myPush(arr) {
-//     // newArr some operations to push the values inside the original Array
-//     return newArr.length;
-// }
-// let obj = {
-//     0: 1,
-//     1: 2,
-//     2: 3,
-//     length: 3
-// }
 
-// console.log(obj.length)
-
-//pop
+//pop - returns the popped element
 // let arr = [1, 2, 3, 4, 5];
 
 // let x = arr.pop();
@@ -105,29 +93,31 @@
 // let fruits = ['apple', 'banana', 'orange', 'kiwi'];
 
 // fruits.pop();
-// console.log(fruits)
-// console.log(fruits.pop())
-// console.log(fruits)
-// console.log(fruits.push('strawberry'))
-// console.log(fruits.push('melon'))
-// console.log(fruits)
+// console.log(fruits) //apple banana orange
+// console.log(fruits.pop()) //orange
+// console.log(fruits) //apple banana
+// console.log(fruits.push('strawberry')) //3
+// console.log(fruits.push('melon')) //4
+// console.log(fruits)//apple banana strawberry melon
 
-// console.log(fruits.shift());
-// console.log(fruits);
+// ------shift removes from front and returns the removed element
+// console.log(fruits.shift());//apple
+// console.log(fruits); //banana orange kiwi
 
-// let x = fruits.unshift('one')
+// // ------unshift adds to front and returns new length
+// let x = fruits.unshift('one') //one banana orange kiwi
 // console.log(x);
 
 // console.log(fruits);
 
-//----------->SLICE
+//----------->SLICE ------ used to slice the array
 
 // let fruits = ['apple', 'banana', 'orange', 'kiwi', 'melon', 'tomato', 'grapes']
 
-// // let result = fruits.slice(1, 5);
-// // let result = fruits.slice(4);
-// // let result = fruits.slice(1, -2);
-// // let result = fruits.slice(-3);
+// let result = fruits.slice(1, 5); //last one excluded banana ...melon
+// let result = fruits.slice(4); //melon ... goes till last
+// let result = fruits.slice(1, -2);//banana ... melon, -2 is excluded
+// let result = fruits.slice(-3); //melon tomato grapes
 
 // console.log(fruits.push('strawberry', 'papaya', 'pear')); //10
 // console.log(fruits.pop()); //pear
@@ -136,42 +126,14 @@
 // let result = fruits.slice(0, 3);
 // console.log(result); // jackfruit,banana, orange
 
-//---------------Some and every method
 
-// let arr = [1, 2, 3, 4, 5, 6];
 
-// let func = (item) => {
-//     if (item % 2 == 0) {            // element % 2 --> true, false
-//         return true
-//     }
-// }
 
-// let result1 = arr.some((element) => {
-//     return element % 2 == 0
-// })
+// ------indexOf
+// The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
 
-// let result1 = arr.some(func) //callback function
-// console.log(result1);
+// let fruits = ['apple', 'banana', 'pear', 'orange', 'banana']
+// console.log(fruits.indexOf('banana')) //1
+// console.log(fruits.indexOf('banana', 2)) //4
 
-// let callBack = item => item > 3
-// let result2 = arr.some(callBack);
-// console.log(result2);
-
-// console.log(arr.some(item => item > 3))
-
-//-----------EVERY - returns true when EVERY element of the array satisfies the condition
-// let arr = [2, 4, 6, 8];
-// let result = arr.every(item => item % 2 == 0)
-// console.log(result);
-
-// let arr = [1, 2, 3, 4, 5, 6]
-
-// console.log(arr.some(y => y < 2))// true
-// console.log(arr.every(y => y < 6)) // true
-
-// let fruits = ['apple', 'orange', 'banana', 'pear']
-// let a = 'apple'
-// console.log(a.length);
-
-// console.log(fruits.some(item => item.length < 5));
-
+// second argument is the starting index
