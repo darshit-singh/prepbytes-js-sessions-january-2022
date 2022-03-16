@@ -120,24 +120,24 @@
 // const object = {
 //     message: 'Hello, World!',
 //     getMessage() {
-//       const message = 'Hello, Earth!';
-//       return this.message;
+//         const message = 'Hello, Earth!';
+//         return this.message;
 //     }
-//   };
-//   console.log(object.getMessage());
+// };
+// console.log(object.getMessage()); //Hello World
 
 // --------question3
 // const object = {
 //     who: 'World',
 //     greet() {
-//       return `Hello, ${this.who}!`;
+//         return `Hello, ${this.who}!`;
 //     },
 //     farewell: () => {
-//       return `Goodbye, ${this.who}!`;
+//         return `Goodbye, ${this.who}!`;
 //     }
-//   };
-//   console.log(object.greet());    // hello world
-//   console.log(object.farewell()); //goodbye undefined
+// };
+// console.log(object.greet());    // hello world
+// console.log(object.farewell()); //goodbye undefined
 
 
 
