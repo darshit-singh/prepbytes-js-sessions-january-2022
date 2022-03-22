@@ -1,7 +1,8 @@
 // call, apply, bind
 // let user = {
 //     name: 'darshit',
-//     sayHi: function () {
+//     sayHi: function (a, b) {
+//         console.log(a, b)
 //         console.log(this)
 //         console.log(this.name)
 //     }
@@ -11,8 +12,8 @@
 // }
 
 // console.log(user.sayHi)
-// user.sayHi.call(user)
-// user.sayHi.apply(admin)
+// user.sayHi.call(user, 1, 2)
+// user.sayHi.apply(admin, ['a', 'b'])
 // user.sayHi.bind(admin)()
 
 // let hello = user.sayHi.bind(admin);
