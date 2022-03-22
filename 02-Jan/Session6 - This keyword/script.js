@@ -126,15 +126,15 @@
 // console.log(result) //
 
 
-// let obj = {
-//     who: 'World',
-//     greet: function () {
-//         console.log(`Hello, ${this.who}`)
-//     },
-//     farewell: () => {
-//         console.log(`Goodbye, ${this.who}`)
-//     }
-// }
+let obj = {
+    who: 'World',
+    greet: function () {
+        console.log(`Hello, ${this.who}`)
+    },
+    farewell: () => {
+        console.log(`Goodbye, ${this.who}`)
+    }
+}
 
 // obj.greet()
 // obj.farewell()
