@@ -92,19 +92,19 @@
 // loopTime()
 
 
-function loopTime() {
-    for (var i = 1; i <= 5; i++) {
-        function close(x) {
-            setTimeout(function () {
-                console.log(x)
-            }, x * 1000)
-        }
-        close(i)
-    }
+// function loopTime() {
+//     for (var i = 1; i <= 5; i++) {
+//         function close(x) {
+//             setTimeout(function () {
+//                 console.log(x)
+//             }, x * 1000)
+//         }
+//         close(i)
+//     }
 
-    console.log('inside loopTime')
-}
-loopTime()
+//     console.log('inside loopTime')
+// }
+// loopTime()
 
 
 

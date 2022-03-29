@@ -1,47 +1,54 @@
-// -------callback hell
+//explain event loop
+// Promises
 
-
-
-// function printVowels() {
-//     setTimeout(() => {
-//         console.log("A");
-//     }, 1000);
-//     setTimeout(() => {
-//         console.log("E");
-//     }, 1000);
-//     setTimeout(() => {
-//         console.log("I");
-//     }, 1000);
-//     setTimeout(() => {
-//         console.log("O");
-//     }, 1000);
-//     setTimeout(() => {
-//         console.log("U");
-//     }, 1000);
+//synchronous behaviour
+// function printAlphabets() {
+//     console.log("A")
+//     console.log("B")
+//     console.log("C")
+//     console.log("D")
+//     console.log("E")
 // }
 
-// printVowels();
+// Q - modify the function printAlphabets so that ABCDE are printed after 1 second each
 
-//if I want to print them one after other
-// function printVowels() {
+// A -
+// function printAlphabets() {
 //     setTimeout(() => {
-//         console.log("A");
-//     }, 1000);
+//         console.log("A")
+//     }, 1000)
 //     setTimeout(() => {
-//         console.log("E");
-//     }, 2000);
+//         console.log("B")
+//     }, 2000)
 //     setTimeout(() => {
-//         console.log("I");
-//     }, 3000);
+//         console.log("C")
+//     }, 3000)
 //     setTimeout(() => {
-//         console.log("O");
-//     }, 4000);
+//         console.log("D")
+//     }, 4000)
 //     setTimeout(() => {
-//         console.log("U");
-//     }, 5000);
+//         console.log("E")
+//     }, 5000)
+// }
+// printAlphabets()
+
+
+
+//without Dry
+// function print(char, delay) {
+//     setTimeout(() => {
+//         console.log(char)
+//     }, delay)
 // }
 
-// classic callback pyramid of doom:
+// print("A", 1000)
+// print("B", 2000)
+// print("C", 3000)
+// print("D", 4000)
+// print("E", 5000)
+
+
+// But I want to keep the delay fixed at 1000
 //---------nested callback
 // function printValue() {
 //     setTimeout(() => {
@@ -53,7 +60,7 @@
 // }
 // printValue()
 
-// But I want to keep the delay fixed at 1000
+
 // function printVowels() {
 //     setTimeout(() => {
 //         console.log('A')
@@ -72,9 +79,6 @@
 //         }, 1000)
 //     }, 1000)
 // }
-
-// printVowels()
-
 
 
 //-----------------WITH A FUNCTION
@@ -102,9 +106,7 @@
 
 
 
-
-
-
+// To solve callback hell JS came up with something known as promises.
 
 
 // ------------PROMISE SYNTAX
@@ -117,7 +119,6 @@
 // fulfilled: meaning that the operation was completed successfully.
 // rejected: meaning that the operation failed.
 
-
 // function printNum(num) {
 //     return new Promise((resolve, reject) => {
 //         if (num % 2 == 0) {
@@ -127,6 +128,7 @@
 //         }
 //     })
 // }
+
 
 // printNum(25)
 //     .then((response) => {             //to handle success response
@@ -138,7 +140,6 @@
 //     .finally(() => {                  //runs in both cases; reject and resolve
 //         console.log("PROMISE IS COMPLETED");
 //     })
-
 
 // let promise1 = new Promise((resolve, reject) => {
 //     console.log("Promise1 called")
@@ -162,6 +163,7 @@
 
 // promiseA.then((result) => { console.log(result) })
 // promiseB.then((result) => { console.log(result) })
+
 
 // function callPromise(alphabet) {
 //     return new Promise((resolve, reject) => {
@@ -208,7 +210,7 @@
 //     })
 // })
 
-
+// ----------promise chaining
 // function callPromise(alphabet) {
 //     return new Promise((resolve, reject) => {
 //         setTimeout(() => {
@@ -228,114 +230,9 @@
 
 
 
-// ----------promise.all
-// promise.all accepts an array
-// Promise.all([
-//     new Promise(resolve => setTimeout(() => resolve(1), 3000)), // 1
-//     new Promise(resolve => setTimeout(() => resolve(2), 2000)), // 2
-//     new Promise(resolve => setTimeout(() => resolve(3), 1000))  // 3
-// ]).then((data) => { console.log(data) });
-
-// Please note that the order of the resulting array members is the same as in its source promises. Even though the first promise takes the longest time to resolve, it’s still first in the array of results.
-
-
-// Promise.all([
-//     new Promise((resolve, reject) => setTimeout(() => resolve(1), 1000)),
-//     new Promise((resolve, reject) => setTimeout(() => reject('Error! Promise 2 failed'), 2000)),
-//     new Promise((resolve, reject) => setTimeout(() => resolve(3), 3000)),
-//     new Promise((resolve, reject) => setTimeout(() => reject('Error! Promise 4 failed'), 3000))
-// ])
-//     .then(data => console.log(data))
-//     .catch(err => console.error(err));
 
 
 
 
 
 
-
-
-
-
-
-// *****************************************************************************************
-// --------EXTRA
-
-// setTimeout(() => {
-//     console.log("call domino's")     //-----------task 1
-//     let resolve = 'done1'            //------1 is complete
-//     let reject = 'Error encountered in order!'
-//     setTimeout(() => {
-//         if (resolve === 'done1') {
-//             console.log("domino's takes order") //--------------task 2
-//             resolve = 'done2'                   //------2 is complete
-//         }
-//         else {
-//             console.log(reject, 'task1 failed') //--------- task1 not done
-//             return
-//         }
-//         setTimeout(() => {
-//             if (resolve === 'done2') {
-//                 console.log("domino's confirms order") //------------3
-//                 resolve = 'done3'   //---------3 is complete
-//             }
-//             else {
-//                 console.log(reject, 'task2 failed') //------task2 not done
-//                 return
-//             }
-//             setTimeout(() => {
-//                 if (resolve === 'done3') {
-//                     console.log("order delivered")//-------------4
-//                     resolve = 'done4' //---------4 is complete
-//                 }
-//                 else {
-//                     console.log(reject, 'task3 failed')//--------task3 not done
-//                     return
-//                 }
-//             }, 1000)
-//         }, 1000)
-//     }, 1000)
-// }, 1000)
-
-// pizza promise
-// -------- Pizza example
-// let promise1 = new Promise((res, rej) => {
-//     setTimeout(() => {
-//         res("call domino's")
-//     }, 1000)
-// })
-// let promise2 = new Promise((res, rej) => {
-//     setTimeout(() => {
-//         res("domino's takes order")
-//     }, 2000)
-// })
-// let promise3 = new Promise((res, rej) => {
-//     setTimeout(() => {
-//         res("domino's confirms order")
-//     }, 3000)
-// })
-// let promise4 = new Promise((res, rej) => {
-//     setTimeout(() => {
-//         res("order gets delivered")
-//     }, 4000)
-// })
-
-// promise1.then(result => console.log(result))
-// promise2.then(result => console.log(result))
-// promise3.then(result => console.log(result))
-// promise4.then(result => console.log(result))
-
-// promise1.then((result) => {
-//     console.log(result) //------------------promise1 resolve
-//     return promise2
-// }).then((result) => {
-//     console.log(result) //-------------------promise2 resolve
-//     return promise3
-// }).then((result) => {
-//     console.log(result) // -----------------promise3 resolve
-//     return promise4
-// }).then((result) => {
-//     console.log(result)// -------------------promise4 resolve
-// }).catch((err) => {
-//     console.error(err)
-// })
