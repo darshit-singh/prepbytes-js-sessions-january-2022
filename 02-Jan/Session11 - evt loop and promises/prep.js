@@ -1,5 +1,25 @@
 //explain event loop
-// Promises
+// --------setTimeout
+
+// function cb() {
+//     console.log('After timeout')
+// }
+
+// function printSomething() {
+//     console.log('print something')
+// }
+
+// console.log("Me first")
+
+// setTimeout(cb, 2000)
+// setTimeout(cb, 0)
+
+// printSomething()
+
+// console.log("Me second")
+
+
+//--------- Promises
 
 //synchronous behaviour
 // function printAlphabets() {
